@@ -1,0 +1,59 @@
+.main-container{
+    &-w { 
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3%;
+        height: 700px;
+        box-sizing: border-box;
+    }
+
+    &__center-w {
+        width: 65%;
+        height: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        position: relative;
+
+        &__left {
+            border: 1px solid pink;
+            width: 10%;
+            height: 100%;
+            background-color: transparent;
+            opacity: 0.85;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        &__right {
+            border: 1px dashed darkred;
+            width: 88%;
+            height: 100%;
+            border-radius: 3px;
+            box-sizing: border-box;   
+            position: relative;
+        }
+
+    }
+    &__right-menu {
+        border: 1px solid darkred;
+        width: 10%;
+        height: 100%;
+        background-color: transparent;
+        opacity: 0.8;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    &__edit {
+        border: 1px solid darkred;
+        width: 20%;
+        height: 100%;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+    }
+}

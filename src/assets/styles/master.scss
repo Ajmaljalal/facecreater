@@ -1,0 +1,18 @@
+@import './container/genLayout/genLayout.scss';
+@import './container/header/index.scss';
+@import './container/mainContainer/index.scss';
+@import './components/imageEditor.scss';
+@import './components/actions.scss';
+@import './components/arrowButtons.scss';
+
+@font-face {
+    font-family: "Bahij Jalal";
+    src: url('../fonts/font-files/Bahij\ Jalal-Regular.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+  }
+
+
+body {
+    box-sizing: border-box;
+    font-family: "bahij Jalal"
+}
