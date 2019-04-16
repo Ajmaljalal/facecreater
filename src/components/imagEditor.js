@@ -19,7 +19,7 @@ class ImageEditor extends Component {
             <Draggable bounds="parent" enableUserSelectHack={false}>
                 <div className='image-editor__text'>
                     {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
-                        <textarea maxLength='500' autoFocus={true}/>
+                        <textarea maxLength='400' autoFocus={true} placeholder={this.props.text}/>
                     {/* </Draggable> */}
                 </div>
             </Draggable>
