@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import download from 'downloadjs'
+import Draggable from 'react-draggable';
 import ImageEditor from '../../components/imagEditor'
 // import testImage from '../../assets/pngs/postImages/img-2.jpg'
 import Actions  from '../../components/acctionButtons'
@@ -34,7 +35,14 @@ class MainContainer extends Component {
 
 
   creatPost = () => {
+    const {currentImag} = this.state;
+    const image = require(`../../assets/pngs/postImages/img-${currentImag}.jpg`)
+    var img = new Image();
+    img.src = image;
+    const width = img.width;
+    const height = img.height;
     const node = document.getElementById('post');
+    // node.style.height = `${height}px`;
     html_to_image.toPng(node)
       .then(function (dataUrl) {
           // const img = new Image();
@@ -63,15 +71,20 @@ class MainContainer extends Component {
   render() {
     const { currentImag } = this.state;
     const image = require(`../../assets/pngs/postImages/img-${currentImag}.jpg`)
-    console.log(image)
-    // image = require(`../../assets/pngs/postImages/img-${currentImag}.png`)
+    var img = new Image();
+    img.src = image;
+    img.onload = function() {
+      console.log('this is ' + img.width + 'x' + img.height);
+    }
     
     return (
       <div className='main-container-w'>
         <div className='main-container__center-w'>
-          <div className='main-container__edit'>
-            <EditButtons />
-          </div>
+          <Draggable enableUserSelectHack={false}>
+            <div className='main-container__edit'>
+              <EditButtons />
+            </div>
+          </Draggable>
           <div className='main-container__center-w__right'>
             <ArrowButton text = '<' position='left' onClick={this.changeImageBackward}/>
             <ImageEditor text='دلته خپل متن ولیکئ' img={image}/>
