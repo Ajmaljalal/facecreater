@@ -1,0 +1,46 @@
+.edit-buttons {
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    padding-left: 3px;
+    &:before {
+        content: ':::::::::';
+        display: block;
+        border-radius: 3px;
+        position: absolute;
+        top: -25px;
+        right: 50%;
+    }
+    button {
+        color: black;
+        font-size: 20px;
+        margin-right: 2px;
+        border: 1px solid gray;
+        background: none;
+        cursor: pointer;
+        border-radius: 2px;
+
+    }
+    select {
+        padding: 4px;
+        margin-left: 3px;
+        border-radius: 2px;
+    }
+    &__fontup {
+        font-weight: bolder;
+        margin-left: 2px;
+        
+    }
+    &__fontdown {
+        font-size: 15px;
+
+    }
+
+    &__bgcolor {
+        color: green;
+    }
+}

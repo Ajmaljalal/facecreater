@@ -16,13 +16,13 @@ class ImageEditor extends Component {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-            <Draggable bounds="parent" enableUserSelectHack={false}>
-                <div className='image-editor__text'>
-                    {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
-                        <textarea maxLength='400' autoFocus={true} placeholder={this.props.text}/>
-                    {/* </Draggable> */}
-                </div>
-            </Draggable>
+                <Draggable bounds="parent" enableUserSelectHack={false}>
+                    <div className='image-editor__text'>
+                        {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
+                            <textarea maxLength='400' autoFocus={true} placeholder={this.props.text}/>
+                        {/* </Draggable> */}
+                    </div>
+                </Draggable>
             </div>
         )
     }

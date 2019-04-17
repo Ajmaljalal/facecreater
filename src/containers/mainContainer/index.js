@@ -14,7 +14,7 @@ const html_to_image = require('html-to-image');
 
 class MainContainer extends Component {
   state = {
-    currentImag: 10,
+    currentImag: 1,
     text: ''
   }
 
@@ -35,12 +35,6 @@ class MainContainer extends Component {
 
 
   creatPost = () => {
-    const {currentImag} = this.state;
-    const image = require(`../../assets/pngs/postImages/img-${currentImag}.jpg`)
-    var img = new Image();
-    img.src = image;
-    const width = img.width;
-    const height = img.height;
     const node = document.getElementById('post');
     // node.style.height = `${height}px`;
     html_to_image.toPng(node)
@@ -73,9 +67,6 @@ class MainContainer extends Component {
     const image = require(`../../assets/pngs/postImages/img-${currentImag}.jpg`)
     var img = new Image();
     img.src = image;
-    img.onload = function() {
-      console.log('this is ' + img.width + 'x' + img.height);
-    }
     
     return (
       <div className='main-container-w'>
@@ -87,7 +78,7 @@ class MainContainer extends Component {
           </Draggable>
           <div className='main-container__center-w__right'>
             <ArrowButton text = '<' position='left' onClick={this.changeImageBackward}/>
-            <ImageEditor text='دلته خپل متن ولیکئ' img={image}/>
+            <ImageEditor text='دلته خپل متن ولیکئ' img={image} dimensions={{width: img.width, height: img.height}}/>
             <ArrowButton text = '>' position='right' onClick={this.changeImageForward}/>
           </div>
           <Actions action={{download: this.creatPost, share: this.sharePost}} />
