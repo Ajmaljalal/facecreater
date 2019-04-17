@@ -1,12 +1,15 @@
 .actions {
-    position: absolute;
-    top: 80%;
-    right: 0;
+    position: fixed;
+    top: 70%;
+    right: 30%;
     z-index: 5;
     button {
         margin-left: 5px;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         border: none;
         border-radius: 50%;
         background: none;
