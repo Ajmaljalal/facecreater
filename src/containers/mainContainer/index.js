@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import download from 'downloadjs'
-import Draggable from 'react-draggable';
+// import Draggable from 'react-draggable';
 import ImageEditor from '../../components/imagEditor'
 // import testImage from '../../assets/pngs/postImages/img-2.jpg'
 import Actions  from '../../components/acctionButtons'
 import ArrowButton from '../../components/arrowButton'
-import EditButtons from '../../components/editButtons'
 
 const html_to_image = require('html-to-image');
 
@@ -71,11 +70,6 @@ class MainContainer extends Component {
     return (
       <div className='main-container-w'>
         <div className='main-container__center-w'>
-          <Draggable enableUserSelectHack={false}>
-            <div className='main-container__edit'>
-              <EditButtons />
-            </div>
-          </Draggable>
           <div className='main-container__center-w__right'>
             <ArrowButton text = '<' position='left' onClick={this.changeImageBackward}/>
             <ImageEditor text='دلته خپل متن ولیکئ' img={image} dimensions={{width: img.width, height: img.height}}/>

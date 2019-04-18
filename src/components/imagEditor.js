@@ -1,12 +1,99 @@
 import React, { Component } from 'react'
 import Draggable from 'react-draggable';
+import EditButtons from './editButtons';
 // import Image from 'react-image-resizer';
 // const Resizable = require('react-resizable').Resizable;
 
 class ImageEditor extends Component {
-    state = {}
+    state = {
+        textAlign: 'center',
+        fontSize: '45',
+        color: 'black',
+        fontFamily: "Bahij Jalal",
+        underLine: false,
+        orderedList: false,
+        unorderedList: false,
+        hLine: false,
+        bgColor: 'none',
+        emoji: 'none',
+        fontWeight: 'normal',
+        italic: 'none',
+        textDecor: 'normal'
+    }
+
+    handleFontStyles  = (e) => {
+        let fontSize = this.state.fontSize;
+        switch (e.target.getAttribute('name')) {
+            case 'fontUp':
+                this.setState({
+                    fontSize: ++fontSize
+                })
+                break;
+            case 'fontDown':
+                this.setState({
+                    fontSize: --fontSize
+                })
+                break;
+            case 'right':
+                this.setState({
+                    textAlign: 'right'
+                })
+                break;
+            case 'center':
+                this.setState({
+                    textAlign: 'center'
+                })
+                break;
+            case 'underLine':
+                this.setState({
+                    underLine: true,
+                })
+                break;
+            case 'fontWeight':
+                this.setState({
+                    fontWeight: this.state.fontWeight === 'bold' ? 'normal' : 'bold'
+                })
+                break;
+            case 'italic':
+                this.setState({
+                    italic: this.state.italic === 'italic' ? 'normal' : 'italic'
+                })
+                break;
+            case 'underline':
+                this.setState({
+                    textDecor: this.state.textDecor === 'underline' ? 'none' : 'underline'
+                })
+                break;
+            case 'hLine':
+                this.setState({
+                    hLine: true
+                })
+                break;
+            case 'bgColor':
+                this.setState({
+                    bgColor: e.target.value
+                })
+                break;
+            case 'fontColor':
+                this.setState({
+                    color: e.target.value
+                })
+                break;
+            case 'fontfamily':
+                console.log(e.target.value)
+                this.setState({
+                    fontFamily: e.target.value
+                })
+                break;
+
+            default:
+                break;
+        }
+        
+    }
     
     render() {
+        const { fontSize, fontWeight, textAlign, italic, textDecor, bgColor, color, fontFamily } = this.state;
         return (
             <div className='image-editor' id='post' 
                 style={{ 
@@ -16,10 +103,31 @@ class ImageEditor extends Component {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
+                <Draggable enableUserSelectHack={false}>
+                    <div className='main-container__edit'>
+                        <EditButtons handleFontStyles = {this.handleFontStyles} />
+                    </div>
+                </Draggable>
                 <Draggable bounds="parent" enableUserSelectHack={false}>
                     <div className='image-editor__text'>
                         {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
-                            <textarea maxLength='400' autoFocus={true} placeholder={this.props.text}/>
+                            <textarea 
+                                maxLength='400' 
+                                autoFocus={true} 
+                                placeholder={this.props.text}
+                                style = {{
+                                    fontSize: `${fontSize}px`,
+                                    fontWeight: fontWeight,
+                                    textAlign: textAlign,
+                                    fontFamily: fontFamily,
+                                    fontStyle: italic,
+                                    textDecoration: textDecor,
+                                    backgroundColor: bgColor,
+                                    opacity: this.state.bgColor !== 'none' ? '0.7' : '1',
+                                    color: color
+
+                                }}
+                            />
                         {/* </Draggable> */}
                     </div>
                 </Draggable>

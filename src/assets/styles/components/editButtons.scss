@@ -23,6 +23,11 @@
         background: none;
         cursor: pointer;
         border-radius: 2px;
+        box-shadow: 0px 0px 5px black;
+        outline: none;
+        &:hover {
+            box-shadow: none;
+        }
 
     }
     select {
@@ -32,15 +37,41 @@
     }
     &__fontup {
         font-weight: bolder;
-        margin-left: 2px;
-        
+        margin-left: 2px;   
     }
     &__fontdown {
         font-size: 15px;
+    }
 
+    &__fontcolor {
+        display: flex;
+        input {
+            margin-right: 2px;
+            border: 1px solid gray;
+            background: none;
+            cursor: pointer;
+            border-radius: 2px;
+            box-shadow: 0px 0px 5px black;
+            outline: none;
+            &:hover {
+                box-shadow: none;
+            }
+        }
     }
 
     &__bgcolor {
-        color: green;
+        display: flex;
+        input {
+            margin-right: 2px;
+            border: 1px solid gray;
+            background: none;
+            cursor: pointer;
+            border-radius: 2px;
+            box-shadow: 0px 0px 5px black;
+            outline: none;
+            &:hover {
+                box-shadow: none;
+            }
+        }
     }
 }
