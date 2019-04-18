@@ -10,9 +10,6 @@ class Home extends Component {
   render() {
     return (
       <div className='main-wrapper'>
-        {/* <img src={bgImg} alt='bg'/> */}
-        {/* <div className='main-wrapper__layer'/> */}
-        <div className='header'> <Header/> </div>
         <div className='main-content'> <MainContainer /> </div>
         <div className='footer'> <Footer /> </div>
       </div>

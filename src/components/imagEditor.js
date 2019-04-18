@@ -7,9 +7,9 @@ import EditButtons from './editButtons';
 class ImageEditor extends Component {
     state = {
         textAlign: 'center',
-        fontSize: '45',
+        fontSize: '40',
         color: 'black',
-        fontFamily: "Bahij Jalal",
+        fontFamily: "Bahij Titr",
         underLine: false,
         orderedList: false,
         unorderedList: false,
@@ -95,42 +95,43 @@ class ImageEditor extends Component {
     render() {
         const { fontSize, fontWeight, textAlign, italic, textDecor, bgColor, color, fontFamily } = this.state;
         return (
-            <div className='image-editor' id='post' 
-                style={{ 
-                    backgroundImage: `url(${this.props.img})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: '100% auto',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            >
+            <div className='image-editor-w'>
                 <Draggable enableUserSelectHack={false}>
                     <div className='main-container__edit'>
                         <EditButtons handleFontStyles = {this.handleFontStyles} />
                     </div>
                 </Draggable>
-                <Draggable bounds="parent" enableUserSelectHack={false}>
-                    <div className='image-editor__text'>
-                        {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
-                            <textarea 
-                                maxLength='400' 
-                                autoFocus={true} 
-                                placeholder={this.props.text}
-                                style = {{
-                                    fontSize: `${fontSize}px`,
-                                    fontWeight: fontWeight,
-                                    textAlign: textAlign,
-                                    fontFamily: fontFamily,
-                                    fontStyle: italic,
-                                    textDecoration: textDecor,
-                                    backgroundColor: bgColor,
-                                    opacity: this.state.bgColor !== 'none' ? '0.7' : '1',
-                                    color: color
-
-                                }}
-                            />
-                        {/* </Draggable> */}
-                    </div>
-                </Draggable>
+                <div className='image-editor' id='post' 
+                    style={{ 
+                        backgroundImage: `url(${this.props.img})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: '100% auto',
+                        backgroundRepeat: 'no-repeat',
+                    }}
+                >
+                    <Draggable bounds="parent" enableUserSelectHack={false}>
+                        <div className='image-editor__text'>
+                            {/* <Draggable bounds="parent" enableUserSelectHack={false}> */}
+                                <textarea 
+                                    maxLength='400' 
+                                    autoFocus={true} 
+                                    placeholder={this.props.text}
+                                    style = {{
+                                        fontSize: `${fontSize}px`,
+                                        fontWeight: fontWeight,
+                                        textAlign: textAlign,
+                                        fontFamily: fontFamily,
+                                        fontStyle: italic,
+                                        textDecoration: textDecor,
+                                        backgroundColor: bgColor,
+                                        opacity: this.state.bgColor !== 'none' ? '0.7' : '1',
+                                        color: color
+                                    }}
+                                />
+                            {/* </Draggable> */}
+                        </div>
+                    </Draggable>
+                </div>
             </div>
         )
     }

@@ -13,7 +13,7 @@ const html_to_image = require('html-to-image');
 
 class MainContainer extends Component {
   state = {
-    currentImag: 1,
+    currentImag: 6,
     text: ''
   }
 
