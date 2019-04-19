@@ -11,7 +11,6 @@ class Home extends Component {
     return (
       <div className='main-wrapper'>
         <div className='main-content'> <MainContainer /> </div>
-        <div className='footer'> <Footer /> </div>
       </div>
     )
   }
