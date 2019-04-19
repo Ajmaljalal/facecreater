@@ -75,7 +75,7 @@ class MainContainer extends Component {
         <div className='main-container__center-w'>
           <div className='main-container__center-w__right'>
             <ArrowButton text = '<' position='left' onClick={this.changeImageBackward}/>
-            <ImageEditor text='دلته خپل متن ولیکئ' img={image} dimensions={{width: img.width, height: img.height}}/>
+            <ImageEditor text='متن دلته / متن اینجا' img={image} dimensions={{width: img.width, height: img.height}}/>
             <ArrowButton text = '>' position='right' onClick={this.changeImageForward}/>
           </div>
           <Actions action={{download: this.creatPost, share: this.sharePost}} />
