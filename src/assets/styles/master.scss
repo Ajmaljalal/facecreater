@@ -1,0 +1,52 @@
+@import './container/genLayout/genLayout.scss';
+@import './container/header/index.scss';
+@import './container/mainContainer/index.scss';
+@import './components/imageEditor.scss';
+@import './components/actions.scss';
+@import './components/arrowButtons.scss';
+@import './components/editButtons.scss';
+
+@font-face {
+    font-family: "Bahij Jalal";
+    src: url('../fonts/font-files/Bahij\ Jalal-Regular.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+
+@font-face {
+    font-family: "Bahij Yakout";
+    src: url('../fonts/font-files/Bahij\ Yakout-Regular.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+@font-face {
+    font-family: "Bahij Nassim";
+    src: url('../fonts/font-files/Bahij\ Nassim-Regular.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+@font-face {
+    font-family: "Bahij Nazanin";
+    src: url('../fonts/font-files/Bahij\ Nazanin-Regular.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+
+@font-face {
+    font-family: "Bahij Aban";
+    src: url('../fonts/font-files/Bahij\ Aban-Bold.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+
+@font-face {
+    font-family: "Bahij Aban";
+    src: url('../fonts/font-files/Bahij\ Badr-Light.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+@font-face {
+    font-family: "Bahij Titr";
+    src: url('../fonts/font-files/Bahij\ Titr-Bold.ttf') format("ttf"),
+        //  url('/fonts/OpenSans-Regular-webfont.woff') format("woff");
+}
+
+
+body {
+    box-sizing: border-box;
+    font-family: "‌Bahij Jalal"
+}
