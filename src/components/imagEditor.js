@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import Draggable from 'react-draggable';
 import EditButtons from './editButtons';
+import map from '../assets/pngs/map.jpg';
+import  wallmap from '../assets/pngs/wallmap.jpg';
+import flag from '../assets/pngs/flag.png';
 // import Image from 'react-image-resizer';
 // const Resizable = require('react-resizable').Resizable;
 
@@ -93,6 +96,7 @@ class ImageEditor extends Component {
     }
     
     render() {
+        
         const { fontSize, fontWeight, textAlign, italic, textDecor, bgColor, color, fontFamily } = this.state;
         return (
             <div className='image-editor-w'>
@@ -131,6 +135,11 @@ class ImageEditor extends Component {
                             {/* </Draggable> */}
                         </div>
                     </Draggable>
+                    <div className='image-editor__footer'>
+                        <img src={map} alt='map'/>
+                        <img src={flag} alt='mapflag'/>
+                        <img src={wallmap} alt='mapflag'/>
+                    </div>
                 </div>
             </div>
         )

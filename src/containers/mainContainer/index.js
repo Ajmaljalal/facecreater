@@ -13,11 +13,14 @@ const html_to_image = require('html-to-image');
 
 class MainContainer extends Component {
   state = {
-    currentImag: 6,
+    currentImag: 1,
     text: ''
   }
 
   changeImageForward = () => {
+    if(this.state.currentImag >=22){
+      return;
+    }
     this.setState({
       currentImag: this.state.currentImag + 1
     })
