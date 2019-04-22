@@ -72,16 +72,12 @@ class MainContainer extends Component {
     
     return (
       <div className='main-container-w'>
-        <div className='main-container__center-w'>
-          <div className='main-container__center-w__right'>
+          <div className='main-container__center'>
             <ArrowButton text = '<' position='left' onClick={this.changeImageBackward}/>
             <ImageEditor text='متن دلته / متن اینجا' img={image} dimensions={{width: img.width, height: img.height}}/>
             <ArrowButton text = '>' position='right' onClick={this.changeImageForward}/>
           </div>
           <Actions action={{download: this.creatPost, share: this.sharePost}} />
-        </div>
-        <div className='main-container__right-menu'>
-        </div>
       </div>
     )
   }

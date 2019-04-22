@@ -135,11 +135,6 @@ class ImageEditor extends Component {
                             {/* </Draggable> */}
                         </div>
                     </Draggable>
-                    <div className='image-editor__footer'>
-                        <img src={map} alt='map'/>
-                        <img src={flag} alt='mapflag'/>
-                        <img src={wallmap} alt='mapflag'/>
-                    </div>
                 </div>
             </div>
         )

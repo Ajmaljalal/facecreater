@@ -2,21 +2,10 @@
 
 .main-wrapper {
     box-sizing: inherit;
-    position: relative;
-    min-height: 100vh;
-}
-.header {
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-}
-
-.main-content {
-    width: 100%;
+    min-height: 100%;
+    border: 1px solid blue;
     display: flex;
     justify-content: center;
-}
+    align-items: center;
 
-.footer {
-    width: 100%;
 }
