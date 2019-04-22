@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className='main-wrapper'>
-        <div className='main-content'> <MainContainer /> </div>
+        <MainContainer />
       </div>
     )
   }
