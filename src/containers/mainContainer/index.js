@@ -41,9 +41,11 @@ class MainContainer extends Component {
     // node.style.height = `${height}px`;
     html_to_image.toPng(node)
       .then(function (dataUrl) {
-          // const img = new Image();
-          // img.src = dataUrl;
-          download(dataUrl, 'mypost.png');
+          // download(dataUrl, 'mypost.png');
+          var link = document.createElement('a');
+          link.download = 'image.png';
+          link.href = dataUrl;
+          link.click();
       })
       .catch(function (error) {
           console.error('oops, something went wrong!', error);
@@ -56,7 +58,11 @@ class MainContainer extends Component {
       .then(function (dataUrl) {
           // const img = new Image();
           // img.src = dataUrl;
-          download(dataUrl, 'mypost.png');
+          // download(dataUrl, 'mypost.png');
+          // var link = document.createElement('a');
+          // link.download = 'image.png';
+          // link.href = dataUrl;
+          // link.click();
       })
       .catch(function (error) {
           console.error('oops, something went wrong!', error);

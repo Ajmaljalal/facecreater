@@ -12,7 +12,7 @@ class ImageEditor extends Component {
         textAlign: 'center',
         fontSize: '40',
         color: 'black',
-        fontFamily: "Bahij Titr",
+        fontFamily: "Bahij Badr",
         underLine: false,
         orderedList: false,
         unorderedList: false,
